@@ -1,0 +1,11 @@
+kedro run --pipeline resnet50_training --env resnet50_training
+kedro run --pipeline data_preprocessing --env data_preprocessing
+kedro run --pipeline evaluate_model
+kedro run --tags embeddings
+
+
+mlflow ui 
+
+ .\micromamba.exe shell hook -s powershell | Out-String | Invoke-Expression
+
+conda install -c conda-forge kedro kedro-mlflow kedro-viz ipython kedro[jupyter] opencv pytorch torchvision jupyter

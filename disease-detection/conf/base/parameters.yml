@@ -1,0 +1,36 @@
+training:
+  num_classes: 5
+  batch_size: 32
+  learning_rate: 1e-4
+  num_epochs: 1
+
+embeddings:
+  model: mobilenet-v2-imagenet-torch
+  similarity_threshold: 0.92
+
+data:
+  raw_image_dir: data/01_raw/sugarcane-leaf-disease
+  image_size: 224
+
+k_fold:
+  n_folds: 2
+  seed: 42
+
+preprocess:
+  size: 224
+
+  blur:
+    reject_threshold: 30
+    processing_threshold: 120
+
+  noise_max: 25
+
+  brightness:
+    min: 60
+    mid: 100
+    max: 200
+
+  contrast:
+    min: 15
+    mid: 30
+    max: 80
