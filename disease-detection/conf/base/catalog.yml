@@ -18,6 +18,11 @@ rejected_ds:
   dataset: disease_detection.datasets.image_folder.ImageFolderDataset
   path: data/03_rejected/rejected_ds
 
+deduplicated_ds:
+  type: partitions.PartitionedDataset
+  dataset: disease_detection.datasets.image_folder.ImageFolderDataset
+  path: data/05_model_input/deduplicated_ds
+
 trained_resnet_model:
   type: kedro_mlflow.io.artifacts.MlflowArtifactDataset
   dataset:
@@ -36,6 +41,10 @@ test_images:
 predictions:
   type: kedro_datasets.json.JSONDataset
   filepath: data/08_reporting/predictions.json
+
+visualize:
+  type: kedro_datasets.matplotlib.MatplotlibDataset
+  filepath: data/08_reporting/confusion_matrix.png
 
 train_folds:
   type: pickle.PickleDataset

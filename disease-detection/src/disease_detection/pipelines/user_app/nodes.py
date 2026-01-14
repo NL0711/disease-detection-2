@@ -11,6 +11,8 @@ def predict_on_test_images(
 ):
     device = "cuda" if torch.cuda.is_available() else "cpu"
     model = trained_model.to(device)
+
+    #turns off dropout and uses stored running stats for batchnorm
     model.eval()
 
     transform = transforms.Compose([

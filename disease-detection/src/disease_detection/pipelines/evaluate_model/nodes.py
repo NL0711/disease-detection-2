@@ -2,9 +2,9 @@ import torch
 import mlflow
 import matplotlib.pyplot as plt
 import numpy as np
-import cv2
 from sklearn.metrics import confusion_matrix
 import torch
+from kedro.io import DataCatalog
 
 def evaluate_model_node(
     trained_resnet_model,
@@ -33,6 +33,7 @@ def evaluate_model_node(
       all_y_pred.append(preds.cpu())
 
     return torch.cat(all_y_true), torch.cat(all_y_pred)
+
 
 def log_confusion_matrix(
     y_true,
@@ -67,3 +68,6 @@ def log_confusion_matrix(
 
     mlflow.log_figure(fig, artifact_name)
     plt.close(fig)
+
+    return fig
+    

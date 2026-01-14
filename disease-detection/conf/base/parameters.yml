@@ -1,5 +1,5 @@
 training:
-  num_classes: 5
+  num_classes: 3
   batch_size: 32
   learning_rate: 1e-4
   num_epochs: 1
@@ -9,7 +9,7 @@ embeddings:
   similarity_threshold: 0.92
 
 data:
-  raw_image_dir: data/01_raw/sugarcane-leaf-disease
+  raw_image_dir: data/01_raw
   image_size: 224
 
 k_fold:

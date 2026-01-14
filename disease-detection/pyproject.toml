@@ -16,7 +16,11 @@ dependencies = [
     "kedro-viz>=6.7.0",
     "scikit-learn~=1.5.1",
     "seaborn~=0.12.1",
-    "setuptools; python_version >= '3.12'"
+    "setuptools; python_version >= '3.12'",
+    "kedro-mlflow>=2.0.0",
+    "fiftyone>=1.7.2",
+    "torch>=2.9.1",
+    "torchvision>=0.24.1",
 ]
 
 [project.scripts]

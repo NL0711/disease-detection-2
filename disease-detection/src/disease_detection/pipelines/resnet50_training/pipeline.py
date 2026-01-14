@@ -1,7 +1,7 @@
 from kedro.pipeline import Pipeline, node
 from .nodes import train_resnet
 
-def create_pipeline(**kwargs) -> Pipeline:
+def create_res50_pipeline(**kwargs) -> Pipeline:
     return Pipeline([
         node(
             func=train_resnet,
