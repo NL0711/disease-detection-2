@@ -5,7 +5,7 @@ training:
   num_epochs: 1
 
 embeddings:
-  model: mobilenet-v2-imagenet-torch
+  model: clip-vit-base32-torch
   similarity_threshold: 0.92
 
 data:

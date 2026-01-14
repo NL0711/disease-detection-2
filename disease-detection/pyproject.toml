@@ -7,20 +7,18 @@ requires-python = ">=3.10"
 name = "disease_detection"
 readme = "README.md"
 dynamic = ["version"]
-dependencies = [
-    "ipython>=8.10",
-    "jupyterlab>=3.0",
+[dependency-groups]
+
+dev = [
     "notebook",
-    "kedro[jupyter]~=1.1.1",
     "kedro-datasets[pandas-csvdataset, pandas-exceldataset, pandas-parquetdataset, plotly-plotlydataset, plotly-jsondataset, matplotlib-matplotlibdataset]>=3.0",
-    "kedro-viz>=6.7.0",
     "scikit-learn~=1.5.1",
     "seaborn~=0.12.1",
     "setuptools; python_version >= '3.12'",
     "kedro-mlflow>=2.0.0",
-    "fiftyone>=1.7.2",
-    "torch>=2.9.1",
     "torchvision>=0.24.1",
+    "opencv-python-headless>=4.11.0.86",
+    "numpy>=2.2.6",
 ]
 
 [project.scripts]
@@ -93,3 +91,9 @@ ignore = ["E501"]  # Ruff format takes care of line-too-long
 
 [tool.kedro_telemetry]
 project_id = "80c913575b414bc884865362f5f094a9"
+
+[tool.uv.workspace]
+members = [
+    "repo",
+    "notebooks/repo",
+]

@@ -2,7 +2,7 @@ from kedro.pipeline import Pipeline, node
 from .nodes import evaluate_model_node, log_confusion_matrix
 
 
-def create_eval_pipeline(**kwargs) -> Pipeline:
+def create_pipeline(**kwargs) -> Pipeline:
     return Pipeline([
         node(
             func=evaluate_model_node,

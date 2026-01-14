@@ -1,7 +1,7 @@
 [
   {
     "event": "before_pipeline_run",
-    "timestamp": "2026-01-14T01:30:55.737372+00:00"
+    "timestamp": "2026-01-14T19:48:34.246349+00:00"
   },
   {
     "event": "after_dataset_loaded",
@@ -14,7 +14,7 @@
     "event": "after_node_run",
     "node": "preprocessing_node",
     "node_id": "fe8a1dbf",
-    "duration": 3.3079840000027616,
+    "duration": 8.254626399997505,
     "status": "success"
   },
   {
@@ -49,7 +49,7 @@
     "event": "after_node_run",
     "node": "split_data_node",
     "node_id": "d8875a36",
-    "duration": 0.13468529999954626,
+    "duration": 0.1347088000002259,
     "status": "success"
   },
   {
@@ -98,7 +98,7 @@
     "event": "after_node_run",
     "node": "train_preprocess_node",
     "node_id": "dc774f3c",
-    "duration": 8.070043699997768,
+    "duration": 8.231681699999172,
     "status": "success"
   },
   {
@@ -133,7 +133,7 @@
     "event": "after_node_run",
     "node": "train_augmentation_node",
     "node_id": "93211dd0",
-    "duration": 5.447805499999959,
+    "duration": 5.590426599999773,
     "status": "success"
   },
   {
@@ -175,7 +175,7 @@
     "event": "after_node_run",
     "node": "model_transform_node",
     "node_id": "b6a9aba7",
-    "duration": 5.631068000002415,
+    "duration": 6.402712999999494,
     "status": "success"
   },
   {
@@ -203,7 +203,7 @@
     "event": "after_node_run",
     "node": "resnet_training_node",
     "node_id": "1450e88f",
-    "duration": 56.250962199999776,
+    "duration": 76.7905660999968,
     "status": "success"
   },
   {
@@ -238,7 +238,7 @@
     "event": "after_node_run",
     "node": "evaluate_model_node",
     "node_id": "c302b4e2",
-    "duration": 8.595114399999147,
+    "duration": 13.005576899999141,
     "status": "success"
   },
   {
@@ -280,7 +280,7 @@
     "event": "after_node_run",
     "node": "predict_test_images",
     "node_id": "37ee31e1",
-    "duration": 0.4049763000002713,
+    "duration": 0.46171569999933126,
     "status": "success"
   },
   {
@@ -288,7 +288,7 @@
     "dataset": "predictions",
     "node_id": "3812e4ce",
     "status": "Available",
-    "size": 283
+    "size": 282
   },
   {
     "event": "after_dataset_loaded",
@@ -314,12 +314,19 @@
   {
     "event": "after_node_run",
     "node": "log_confusion_matrix_node",
-    "node_id": "79da5b81",
-    "duration": 2.0100029000022914,
+    "node_id": "749e7624",
+    "duration": 1.5780492999983835,
     "status": "success"
   },
   {
+    "event": "after_dataset_saved",
+    "dataset": "visualize",
+    "node_id": "d7f73736",
+    "status": "Available",
+    "size": 17715
+  },
+  {
     "event": "after_pipeline_run",
-    "timestamp": "2026-01-14T01:32:33.214123+00:00"
+    "timestamp": "2026-01-14T19:50:42.594571+00:00"
   }
 ]

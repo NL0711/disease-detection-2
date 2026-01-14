@@ -10,6 +10,10 @@ conf/**/*credentials*
 data/**/
 logs/**
 
+#51 dataset
+.fiftyone
+
+
 # also keep all .gitkeep files
 !.gitkeep
 
